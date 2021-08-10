@@ -1,5 +1,9 @@
 package base.algorithm.sort;
 
+/**
+ * @author Shipin
+ * 快速排序
+ */
 public class QuickSort implements Sort {
     @Override
     public int[] sort(int[] arr) {

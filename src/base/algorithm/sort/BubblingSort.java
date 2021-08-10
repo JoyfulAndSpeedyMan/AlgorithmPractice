@@ -1,5 +1,9 @@
 package base.algorithm.sort;
 
+/**
+ * @author Shipin
+ * 冒泡排序
+ */
 public class BubblingSort implements Sort {
     @Override
     public int[] sort(int[] arr) {
