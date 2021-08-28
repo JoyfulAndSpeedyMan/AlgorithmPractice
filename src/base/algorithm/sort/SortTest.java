@@ -1,7 +1,5 @@
 package base.algorithm.sort;
 
-import com.sun.org.apache.regexp.internal.RE;
-
 import java.util.Arrays;
 import java.util.Random;
 
