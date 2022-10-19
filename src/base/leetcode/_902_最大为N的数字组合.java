@@ -57,8 +57,13 @@ public class _902_最大为N的数字组合 {
             return findLE(num);
         }
         int powMax = (int) Math.pow(10, nb - 1);
+        int n = num % powMax;
+        int factor = 1;
+        if(n/ (powMax * 1.0) < 0.1){
+            factor = 0;
+        }
         int i = Arrays.binarySearch(digits, h1);
-        return findLE(h1 - 1) * powerNumbers[nb - 1] + (i >= 0 ? calcLess(num % powMax) : 0);
+        return findLE(h1 - 1) * powerNumbers[nb - 1] + (i >= 0 ? calcLess(n) : 0) * factor;
     }
 
     public int findLE(int num) {
@@ -94,8 +99,12 @@ public class _902_最大为N的数字组合 {
 //        String[] digits = {"1"};
 //        int n = 834;
 
-        String[] digits = {"1","5","7","8"};
-        int n = 10212;
+//        String[] digits = {"1","5","7","8"};
+//        int n = 10212;
+
+        String[] digits = {"1","2","3","6"};
+        int n = 4023;
+
         _902_最大为N的数字组合 a902最大为N的数字组合 = new _902_最大为N的数字组合();
         int num = a902最大为N的数字组合.atMostNGivenDigitSet(digits, n);
         System.out.println(num);
